@@ -1,64 +1,273 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Projects - Ibrahim Abaci</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
-      crossorigin="anonymous"
     />
-    <title>Ibrahim Abaci Portfolio</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .project-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .project-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      .tech-badge {
+        font-size: 0.8rem;
+      }
+    </style>
   </head>
-  <body class="bg-primary-subtle">
-    <header>
-      <div class="container-fluid ">
-        <nav class="nav-bar sticky bg-primary">
-            <ul class="nav justify-content-end">
-                <li class="nav-item">
-                  <a class="nav-link text-primary-emphasis" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-primary-emphasis" href="about-me.html">About Me</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-primary-emphasis" href="projects.html">Projects</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-primary-emphasis" href="contact.html">Contact</a>
-                  </li>
-              </ul>
-        </nav>
+  <body data-bs-theme="dark">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Ibrahim Abaci</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about-me.html">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="portfolio-info.html">Portfolio Info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-       <div class="card-body">
-          <h5 class="card-title">Higher-Lower</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-          <a href="https://github.com/ROCMondriaanTIN/st-sd-project-p01-hogerlager-IbrahimAbaci.git" class="btn btn-primary">Go to project</a>
+    </nav>
+
+    <!-- Projects Header -->
+    <section class="py-5 bg-dark">
+      <div class="container py-5 text-center">
+        <h1 class="display-4 fw-bold mb-4 animate__animated animate__fadeIn">
+          My Projects
+        </h1>
+        <p class="lead animate__animated animate__fadeIn animate__delay-1s">
+          Here are some of the projects I've worked on during my studies
+        </p>
       </div>
-    </div>
-     <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-       <div class="card-body">
-          <h5 class="card-title">Build-a-Game</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-          <a href="https://github.com/ROCMondriaanTIN/st-sd-p02-project-build-a-game-b1m-oggy-en-de-kakerlakken.git" class="btn btn-primary">Go to project</a>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="py-5 bg-secondary">
+      <div class="container py-5">
+        <div class="row g-4">
+          <!-- Higher-Lower -->
+          <div
+            class="col-lg-6 animate__animated animate__fadeInUp"
+            id="higher-lower"
+          >
+            <div class="card project-card h-100">
+              <img
+                src="https://via.placeholder.com/800x400"
+                class="card-img-top"
+                alt="Higher-Lower Game"
+              />
+              <div class="card-body">
+                <h2 class="card-title">Higher-Lower Game</h2>
+                <div class="mb-3">
+                  <span class="tech-badge badge bg-primary me-1"
+                    >JavaScript</span
+                  >
+                  <span class="tech-badge badge bg-primary me-1">HTML5</span>
+                  <span class="tech-badge badge bg-primary me-1">CSS3</span>
+                </div>
+                <p class="card-text">
+                  A number guessing game where players predict whether the next
+                  number will be higher or lower than the current one. The game
+                  features score tracking and difficulty levels.
+                </p>
+                <h5 class="mt-4">Key Features:</h5>
+                <ul>
+                  <li>Score tracking system</li>
+                  <li>Multiple difficulty levels</li>
+                  <li>Responsive design</li>
+                  <li>Local storage for high scores</li>
+                </ul>
+                <a
+                  href="https://github.com/ROCMondriaanTIN/st-sd-project-p01-hogerlager-IbrahimAbaci.git"
+                  class="btn btn-primary mt-3"
+                  >View on GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Build-a-Game -->
+          <div
+            class="col-lg-6 animate__animated animate__fadeInUp animate__delay-1s"
+            id="build-a-game"
+          >
+            <div class="card project-card h-100">
+              <img
+                src="https://via.placeholder.com/800x400"
+                class="card-img-top"
+                alt="Build-a-Game"
+              />
+              <div class="card-body">
+                <h2 class="card-title">Build-a-Game: Oggy & Cockroaches</h2>
+                <div class="mb-3">
+                  <span class="tech-badge badge bg-primary me-1"
+                    >JavaScript</span
+                  >
+                  <span class="tech-badge badge bg-primary me-1"
+                    >HTML5 Canvas</span
+                  >
+                  <span class="tech-badge badge bg-primary me-1">CSS3</span>
+                </div>
+                <p class="card-text">
+                  An interactive game based on the popular cartoon series "Oggy
+                  and the Cockroaches". Players control Oggy trying to catch the
+                  mischievous cockroaches.
+                </p>
+                <h5 class="mt-4">Key Features:</h5>
+                <ul>
+                  <li>Sprite animations</li>
+                  <li>Collision detection</li>
+                  <li>Multiple levels</li>
+                  <li>Score system</li>
+                </ul>
+                <a
+                  href="https://github.com/ROCMondriaanTIN/st-sd-p02-project-build-a-game-b1m-oggy-en-de-kakerlakken.git"
+                  class="btn btn-primary mt-3"
+                  >View on GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Review-Your-Experience -->
+          <div
+            class="col-lg-6 animate__animated animate__fadeInUp"
+            id="review-experience"
+          >
+            <div class="card project-card h-100">
+              <img
+                src="https://via.placeholder.com/800x400"
+                class="card-img-top"
+                alt="Review Your Experience"
+              />
+              <div class="card-body">
+                <h2 class="card-title">Review-Your-Experience</h2>
+                <div class="mb-3">
+                  <span class="tech-badge badge bg-primary me-1">Python</span>
+                  <span class="tech-badge badge bg-primary me-1">Flask</span>
+                  <span class="tech-badge badge bg-primary me-1">SQLite</span>
+                </div>
+                <p class="card-text">
+                  A web application where users can review products and
+                  services. The platform includes user authentication, review
+                  submission, and rating systems.
+                </p>
+                <h5 class="mt-4">Key Features:</h5>
+                <ul>
+                  <li>User authentication</li>
+                  <li>CRUD operations for reviews</li>
+                  <li>Rating system</li>
+                  <li>Responsive design</li>
+                </ul>
+                <a
+                  href="https://github.com/ROCMondriaanTIN/sd24-project-p03-review-your-experience-erudenringu.git"
+                  class="btn btn-primary mt-3"
+                  >View on GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Keuzedeel Project -->
+          <div
+            class="col-lg-6 animate__animated animate__fadeInUp animate__delay-1s"
+          >
+            <div class="card project-card h-100">
+              <img
+                src="https://via.placeholder.com/800x400"
+                class="card-img-top"
+                alt="Keuzedeel Project"
+              />
+              <div class="card-body">
+                <h2 class="card-title">E-commerce Platform (Keuzedeel)</h2>
+                <div class="mb-3">
+                  <span class="tech-badge badge bg-primary me-1">React</span>
+                  <span class="tech-badge badge bg-primary me-1">Node.js</span>
+                  <span class="tech-badge badge bg-primary me-1">MongoDB</span>
+                </div>
+                <p class="card-text">
+                  A full-stack e-commerce platform developed as part of my
+                  specialization module. Includes product listings, shopping
+                  cart, and checkout functionality.
+                </p>
+                <h5 class="mt-4">Key Features:</h5>
+                <ul>
+                  <li>User authentication</li>
+                  <li>Product catalog</li>
+                  <li>Shopping cart</li>
+                  <li>Payment integration</li>
+                </ul>
+                <a href="#" class="btn btn-primary mt-3">View on GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-     <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-       <div class="card-body">
-          <h5 class="card-title">Review-Your-Experience</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-          <a href="https://github.com/ROCMondriaanTIN/sd24-project-p03-review-your-experience-erudenringu.git" class="btn btn-primary">Go to project</a>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+      <div class="container text-center">
+        <p>&copy; 2023 Ibrahim Abaci. All rights reserved.</p>
       </div>
-    </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Animation on scroll
+      document.addEventListener("DOMContentLoaded", function () {
+        const animateElements = document.querySelectorAll(".animate__animated");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const animation =
+                  entry.target.dataset.animate || "animate__fadeIn";
+                entry.target.classList.add(animation);
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+          }
+        );
+
+        animateElements.forEach((element) => {
+          observer.observe(element);
+        });
+      });
+    </script>
   </body>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-    crossorigin="anonymous"
-  ></script>
 </html>
