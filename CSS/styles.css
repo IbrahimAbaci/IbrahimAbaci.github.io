@@ -74,6 +74,9 @@ img {
 .nav-shadow {
   box-shadow: 0 2px 7px rgb(62, 6, 102);
 }
+.profile-about-me {
+  background: linear-gradient(to bottom right, #282d3c 10%, #a777e3 90%);
+}
 
 /* PROJECTS */
 .project-card {
