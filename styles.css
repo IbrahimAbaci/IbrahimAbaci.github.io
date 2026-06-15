@@ -145,6 +145,11 @@ body::after {
   text-decoration: none;
 }
 
+.contact-list a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
 .mini-list {
   color: rgba(239, 252, 255, 0.88);
   line-height: 1.6;
@@ -477,5 +482,11 @@ body::after {
   .skill-row {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .contact-list a,
+  .contact-list strong,
+  .mini-list li {
+    max-width: 100%;
   }
 }
